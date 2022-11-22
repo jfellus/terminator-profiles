@@ -1,0 +1,7 @@
+
+# Added by st,rt,ct
+if [ -f "$TERMINATOR_BOOTSTRAP" ]; then
+    source $TERMINATOR_BOOTSTRAP
+fi
+alias st="source /usr/bin/st"
+#

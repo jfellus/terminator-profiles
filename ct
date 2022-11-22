@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export TERMINATOR_SESSION=${1:-$TERMINATOR_SESSION}
+
+if [ -z "$TERMINATOR_SESSION" ]; then
+    echo "Give a session name" >&2
+else
+
+n=$(ls -1 ~/.config/terminals/$TERMINATOR_SESSION/ 2>/dev/null | grep -v '^\.' | wc -l)
+rm -rf ~/.config/terminals/$TERMINATOR_SESSION/
+
+echo "Cleared session [$TERMINATOR_SESSION] with $n terminals"
+
+fi
