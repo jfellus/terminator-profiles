@@ -20,7 +20,7 @@ echo ">> Restore session [$TERMINATOR_SESSION] - terminal [$TERMINATOR_ID]"
 cd $PWD
 echo \$TERMINATOR_CMD
 history -s \$TERMINATOR_CMD
-\$TERMINATOR_CMD
+eval \$TERMINATOR_CMD
 EOF
 
 n=$(ls -1 ~/.config/terminals/$TERMINATOR_SESSION/ 2>/dev/null | grep -v '^\.' | wc -l)
